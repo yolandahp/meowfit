@@ -1,0 +1,32 @@
+/* Three thick drooping curves per side. Each starts horizontal near the
+   cheek and arcs downward. Right side mirrors the SVG with scaleX(-1). */
+.whiskers {
+  position: absolute;
+  width: 26%;
+  aspect-ratio: 1 / 1;
+  top: 32%;
+  z-index: 2;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><path d='M38 16 Q28 12 18 15' stroke='%235a1f4a' stroke-width='2.8' fill='none' stroke-linecap='round'/><path d='M38 22 Q22 18 4 22' stroke='%235a1f4a' stroke-width='2.8' fill='none' stroke-linecap='round'/><path d='M38 28 Q26 28 14 30' stroke='%235a1f4a' stroke-width='2.8' fill='none' stroke-linecap='round'/></svg>") center/contain no-repeat;
+}
+.whiskers.left  { left: -18%; }
+.whiskers.right { right: -18%; transform: scaleX(-1); }
+
+.whiskers-xobese       { width: 26%; }
+.whiskers-xobese.left  { left: -18%; }
+.whiskers-xobese.right { right: -18%; transform: scaleX(-1); }
+
+.whiskers-obese       { width: 26%; }
+.whiskers-obese.left  { left: -18%; }
+.whiskers-obese.right { right: -18%; transform: scaleX(-1); }
+
+.whiskers-overweight       { width: 26%; }
+.whiskers-overweight.left  { left: -18%; }
+.whiskers-overweight.right { right: -18%; transform: scaleX(-1); }
+
+.whiskers-normal       { width: 26%; }
+.whiskers-normal.left  { left: -18%; }
+.whiskers-normal.right { right: -18%; transform: scaleX(-1); }
+
+.whiskers-underweight       { width: 26%; }
+.whiskers-underweight.left  { left: -18%; }
+.whiskers-underweight.right { right: -18%; transform: scaleX(-1); }

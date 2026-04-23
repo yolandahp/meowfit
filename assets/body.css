@@ -1,0 +1,32 @@
+/* The body is an egg-shape made with border-radius. A pseudo-element
+   draws the belly patch. Different .body-* classes tweak width/height
+   to produce body types. */
+.cat {
+  position: relative;
+  background: #f8c98a;                 /* ginger top */
+  border: 8px solid #5a1f4a;           /* purple outline */
+  border-radius: 52% 52% 48% 48% / 58% 58% 42% 42%;
+  box-shadow:
+    inset -8px -10px 0 rgba(0,0,0,0.04),
+    8px 10px 0 rgba(90, 31, 74, 0.12);
+}
+
+.cat::before {
+  /* belly */
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  transform: translateX(-50%);
+  width: 72%;
+  height: 64%;
+  background: #ffffff;
+  border-radius: 50% 50% 48% 48% / 55% 55% 45% 45%;
+  z-index: 1;
+}
+
+.body-xobese      { width: 285px; height: 210px; border-radius: 50% 50% 48% 48% / 50% 50% 50% 50%; }
+.body-obese       { width: 240px; height: 195px; border-radius: 50% 50% 46% 46% / 52% 52% 48% 48%; }
+.body-overweight  { width: 195px; height: 180px; border-radius: 52% 52% 48% 48% / 58% 58% 42% 42%; }
+.body-normal      { width: 150px; height: 165px; border-radius: 50% 50% 46% 46% / 60% 60% 40% 40%; }
+.body-underweight { width: 105px; height: 158px; border-radius: 50% 50% 46% 46% / 62% 62% 38% 38%; }

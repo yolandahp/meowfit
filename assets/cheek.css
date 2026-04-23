@@ -2,7 +2,7 @@
    the white belly patch. */
 .cheek {
   position: absolute;
-  width: 14%;
+  width: 20%;
   aspect-ratio: 3 / 2;
   background: #ffb3c6;
   border-radius: 50%;
@@ -10,8 +10,8 @@
   z-index: 2;
   opacity: 0.85;
 }
-.cheek.left  { left: 10%; }
-.cheek.right { right: 10%; }
+.cheek.left  { left: 7%; }
+.cheek.right { right: 7%; }
 
 .cheek-xobese       { width: 14%; }
 .cheek-xobese.left  { left: 10%; }
@@ -21,14 +21,14 @@
 .cheek-obese.left  { left: 10%; }
 .cheek-obese.right { right: 10%; }
 
-.cheek-overweight       { width: 14%; }
+.cheek-overweight       { width: 16%; }
 .cheek-overweight.left  { left: 10%; }
 .cheek-overweight.right { right: 10%; }
 
-.cheek-normal       { width: 14%; }
+.cheek-normal       { width: 18%; }
 .cheek-normal.left  { left: 10%; }
 .cheek-normal.right { right: 10%; }
 
-.cheek-underweight       { width: 14%; }
+.cheek-underweight       { width: 20%; }
 .cheek-underweight.left  { left: 10%; }
 .cheek-underweight.right { right: 10%; }

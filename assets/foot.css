@@ -1,0 +1,63 @@
+/* Little cat feet peeking out from the bottom of the body. Each foot is a
+   rounded oval in the same ginger/purple palette as the body, with a pink
+   toe bean on top. Variants scale with body size and spread. */
+.foot {
+  position: absolute;
+  background: #f8c98a;
+  border: 7px solid #5a1f4a;
+  border-radius: 50% 50% 50% 50% / 55% 55% 45% 45%;
+  box-shadow: inset -3px -4px 0 rgba(0,0,0,0.05);
+  z-index: 2;
+}
+
+.foot::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 26%;
+  transform: translateX(-50%);
+  width: 48%;
+  height: 40%;
+  background: #ffc2d1;
+  border-radius: 50%;
+}
+
+.foot-xobese {
+  width: 25%;
+  aspect-ratio: 1 / 1;
+  bottom: -6%;
+}
+.foot-xobese.left  { left: 16%; }
+.foot-xobese.right { right: 16%; }
+
+.foot-obese {
+  width: 25%;
+  aspect-ratio: 1 / 1;
+  bottom: -6%;
+}
+.foot-obese.left  { left: 14%; }
+.foot-obese.right { right: 14%; }
+
+.foot-overweight {
+  width: 25%;
+  aspect-ratio: 1 / 1;
+  bottom: -6%;
+}
+.foot-overweight.left  { left: 12%; }
+.foot-overweight.right { right: 12%; }
+
+.foot-normal {
+  width: 25%;
+  aspect-ratio: 1 / 1;
+  bottom: -6%;
+}
+.foot-normal.left  { left: 10%; }
+.foot-normal.right { right: 10%; }
+
+.foot-underweight {
+  width: 25%;
+  aspect-ratio: 1 / 1;
+  bottom: -6%;
+}
+.foot-underweight.left  { left: 8%; }
+.foot-underweight.right { right: 8%; }

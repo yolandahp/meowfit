@@ -1,0 +1,53 @@
+/* Upward-sweeping tail drawn with inline SVG: a fat purple stroke for the
+   outline plus a narrower ginger stroke on top for the fill. The quadratic
+   path starts at the hip, bows out to the right, and ends with the tip
+   pointing up. stroke-linecap:round gives the soft tube ends. */
+.tail {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 150'><path d='M 25 125 Q 115 110 95 25' fill='none' stroke='%235a1f4a' stroke-width='48' stroke-linecap='round'/><path d='M 25 125 Q 115 110 95 25' fill='none' stroke='%23f8c98a' stroke-width='32' stroke-linecap='round'/></svg>");
+  z-index: -1;
+  transform: rotate(10deg);
+  transform-origin: 19% 83%;
+}
+
+.tail-xobese {
+  width: 45%;
+  aspect-ratio: 130 / 150;
+  right: -10%;
+  bottom: 4%;
+  transform: rotate(15deg);
+}
+
+.tail-obese {
+  width: 50%;
+  aspect-ratio: 130 / 150;
+  right: -12%;
+  bottom: 4%;
+  transform: rotate(15deg);
+}
+
+.tail-overweight {
+  width: 55%;
+  aspect-ratio: 130 / 150;
+  right: -15%;
+  bottom: 6%;
+  transform: rotate(15deg);
+}
+
+.tail-normal {
+  width: 65%;
+  aspect-ratio: 130 / 150;
+  right: -20%;
+  bottom: 6%;
+  transform: rotate(10deg);
+}
+
+.tail-underweight {
+  width: 70%;
+  aspect-ratio: 130 / 150;
+  right: -25%;
+  bottom: 8%;
+  transform: rotate(10deg);
+}

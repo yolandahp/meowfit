@@ -12,10 +12,23 @@
 <link rel="stylesheet" href="assets/mouth.css">
 <link rel="stylesheet" href="assets/foot.css">
 <link rel="stylesheet" href="assets/tail.css">
+<link rel="stylesheet" href="assets/skins/orange/skin.css">
+<link rel="stylesheet" href="assets/skins/calico/skin.css">
+<link rel="stylesheet" href="assets/skins/black/skin.css">
+<link rel="stylesheet" href="assets/skins/white/skin.css">
+<link rel="stylesheet" href="assets/skins/mujaer/skin.css">
 </head>
 <body>
+  <nav class="skin-picker" aria-label="Cat skin">
+    <button data-skin="orange" aria-pressed="false">Orange</button>
+    <button data-skin="calico" aria-pressed="false">Calico</button>
+    <button data-skin="black" aria-pressed="false">Black</button>
+    <button data-skin="white" aria-pressed="false">White</button>
+    <button data-skin="mujaer" aria-pressed="true">Mujaer</button>
+  </nav>
+
   <div class="stage">
-    <div class="cat body-xobese">
+    <div class="cat skin-mujaer body-xobese">
       <span class="ear ear-xobese left"><span class="ear-inner ear-inner-xobese"></span></span>
       <span class="ear ear-xobese right"><span class="ear-inner ear-inner-xobese"></span></span>
       <span class="eye eye-xobese left"><i></i></span>
@@ -33,7 +46,7 @@
   </div>
 
   <div class="stage">
-    <div class="cat body-obese">
+    <div class="cat skin-mujaer body-obese">
       <span class="ear ear-obese left"><span class="ear-inner ear-inner-obese"></span></span>
       <span class="ear ear-obese right"><span class="ear-inner ear-inner-obese"></span></span>
       <span class="eye eye-obese left"><i></i></span>
@@ -51,7 +64,7 @@
   </div>
 
   <div class="stage">
-    <div class="cat body-overweight">
+    <div class="cat skin-mujaer body-overweight">
       <span class="ear ear-overweight left"><span class="ear-inner ear-inner-overweight"></span></span>
       <span class="ear ear-overweight right"><span class="ear-inner ear-inner-overweight"></span></span>
       <span class="eye eye-overweight left"><i></i></span>
@@ -69,7 +82,7 @@
   </div>
 
   <div class="stage">
-    <div class="cat body-normal">
+    <div class="cat skin-mujaer body-normal">
       <span class="ear ear-normal left"><span class="ear-inner ear-inner-normal"></span></span>
       <span class="ear ear-normal right"><span class="ear-inner ear-inner-normal"></span></span>
       <span class="eye eye-normal left"><i></i></span>
@@ -87,7 +100,7 @@
   </div>
 
   <div class="stage">
-    <div class="cat body-underweight">
+    <div class="cat skin-mujaer body-underweight">
       <span class="ear ear-underweight left"><span class="ear-inner ear-inner-underweight"></span></span>
       <span class="ear ear-underweight right"><span class="ear-inner ear-inner-underweight"></span></span>
       <span class="eye eye-underweight left"><i></i></span>
@@ -103,5 +116,22 @@
     </div>
     <div class="label">Underweight</div>
   </div>
+
+  <script>
+    const picker = document.querySelector('.skin-picker');
+    const cats = document.querySelectorAll('.cat');
+    picker.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-skin]');
+      if (!btn) return;
+      const skin = btn.dataset.skin;
+      cats.forEach(cat => {
+        [...cat.classList].forEach(c => c.startsWith('skin-') && cat.classList.remove(c));
+        if (skin !== 'outline') cat.classList.add('skin-' + skin);
+      });
+      picker.querySelectorAll('button').forEach(b =>
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false')
+      );
+    });
+  </script>
 </body>
 </html>

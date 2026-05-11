@@ -3,16 +3,13 @@
    to produce body types. */
 .cat {
   position: relative;
-  background: #f8c98a;                 /* ginger top */
-  border: 8px solid #5a1f4a;           /* purple outline */
+  background: var(--fur, transparent);
+  border: 8px solid var(--outline);
   border-radius: 52% 52% 48% 48% / 58% 58% 42% 42%;
-  box-shadow:
-    inset -8px -10px 0 rgba(0,0,0,0.04),
-    8px 10px 0 rgba(90, 31, 74, 0.12);
+  box-shadow: inset -8px -10px 0 rgba(0,0,0,0.04);
 }
 
 .cat::before {
-  /* belly */
   content: "";
   position: absolute;
   left: 50%;
@@ -20,7 +17,7 @@
   transform: translateX(-50%);
   width: 72%;
   height: 64%;
-  background: #ffffff;
+  background: var(--belly, transparent);
   border-radius: 50% 50% 48% 48% / 55% 55% 45% 45%;
   z-index: 1;
 }

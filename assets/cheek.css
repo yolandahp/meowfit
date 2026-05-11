@@ -4,7 +4,7 @@
   position: absolute;
   width: 20%;
   aspect-ratio: 3 / 2;
-  background: #ffb3c6;
+  background: var(--cheek, transparent);
   border-radius: 50%;
   top: 48%;
   z-index: 2;
@@ -13,22 +13,22 @@
 .cheek.left  { left: 7%; }
 .cheek.right { right: 7%; }
 
-.cheek-xobese       { width: 14%; }
+.cheek-xobese       { width: 14%; top: 48%;}
 .cheek-xobese.left  { left: 10%; }
 .cheek-xobese.right { right: 10%; }
 
-.cheek-obese       { width: 14%; }
+.cheek-obese       { width: 14%; top: 48%;}
 .cheek-obese.left  { left: 10%; }
 .cheek-obese.right { right: 10%; }
 
-.cheek-overweight       { width: 16%; }
+.cheek-overweight       { width: 16%; top: 48%;}
 .cheek-overweight.left  { left: 10%; }
 .cheek-overweight.right { right: 10%; }
 
-.cheek-normal       { width: 18%; }
+.cheek-normal       { width: 18%; top: 46%;}
 .cheek-normal.left  { left: 10%; }
 .cheek-normal.right { right: 10%; }
 
-.cheek-underweight       { width: 20%; }
+.cheek-underweight       { width: 20%; top: 42%; }
 .cheek-underweight.left  { left: 10%; }
 .cheek-underweight.right { right: 10%; }

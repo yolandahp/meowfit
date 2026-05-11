@@ -1,0 +1,99 @@
+/* Calico — white base with a black patch (upper-left) and an orange
+   patch (right side) on the head. Ears are asymmetric to match the
+   patches; tail is white with an orange tip. */
+
+.skin-calico {
+  --fur:        #ffffff;
+  --belly:      #ffffff;
+  --ear-inner:  #ffc2d1;
+  --cheek:      #ffb3c6;
+  --bean:       #ffc2d1;
+}
+
+/* Per-body-type patch placement. Each rule is a copy you can tune
+   independently — body shapes vary in aspect ratio, so the same %
+   coordinates land in different visual spots per type. */
+
+.cat.skin-calico.body-xobese {
+  background:
+    radial-gradient(circle at 20% 24%, #2b2b2b 28%, transparent 0%),
+    radial-gradient(circle at 80% 24%, #f8c98a 28%, transparent 0%),
+    radial-gradient(circle at 50% 80%, #2b2b2b 25%, transparent 0%),
+    var(--fur);
+}
+.cat.skin-calico.body-xobese::before {
+  background:
+    radial-gradient(circle at 50% 95%, #2b2b2b 25%, transparent 0%),
+    var(--belly);
+}
+
+.cat.skin-calico.body-obese {
+  background:
+    radial-gradient(circle at 18% 24%, #2b2b2b 28%, transparent 0%),
+    radial-gradient(circle at 82% 24%, #f8c98a 28%, transparent 0%),
+    radial-gradient(circle at 50% 80%, #2b2b2b 25%, transparent 0%),
+    var(--fur);
+}
+.cat.skin-calico.body-obese::before {
+  background:
+    radial-gradient(circle at 50% 95%, #2b2b2b 25%, transparent 0%),
+    var(--belly);
+}
+
+.cat.skin-calico.body-overweight {
+  background:
+    radial-gradient(circle at 20% 22%, #2b2b2b 25%, transparent 0%),
+    radial-gradient(circle at 80% 22%, #f8c98a 25%, transparent 0%),
+    radial-gradient(circle at 50% 80%, #2b2b2b 25%, transparent 0%),
+    var(--fur);
+}
+.cat.skin-calico.body-overweight::before {
+  background:
+    radial-gradient(circle at 50% 95%, #2b2b2b 25%, transparent 0%),
+    var(--belly);
+}
+
+.cat.skin-calico.body-normal {
+  background:
+    radial-gradient(circle at 22% 20%, #2b2b2b 22%, transparent 0%),
+    radial-gradient(circle at 82% 20%, #f8c98a 22%, transparent 0%),
+    radial-gradient(circle at 50% 80%, #2b2b2b 25%, transparent 0%),
+    var(--fur);
+}
+.cat.skin-calico.body-normal::before {
+  background:
+    radial-gradient(circle at 50% 95%, #2b2b2b 25%, transparent 0%),
+    var(--belly);
+}
+
+.cat.skin-calico.body-underweight {
+  background:
+    radial-gradient(circle at 20% 18%, #2b2b2b 20%, transparent 0%),
+    radial-gradient(circle at 84% 18%, #f8c98a 20%, transparent 0%),
+    radial-gradient(circle at 50% 80%, #2b2b2b 25%, transparent 0%),
+    var(--fur);
+}
+.cat.skin-calico.body-underweight::before {
+  background:
+    radial-gradient(circle at 50% 95%, #2b2b2b 25%, transparent 0%),
+    var(--belly);
+}
+
+/* Yellow iris ring with a black pupil, matching the black cat. */
+.skin-calico .eye {
+  background: radial-gradient(circle, #0c0912 50%, #f9d342 65%);
+}
+
+/* Asymmetric ears: left front matches the black patch, right front matches the orange patch. */
+.skin-calico .ear.left::before  { background: #2b2b2b; }
+.skin-calico .ear.right::before { background: #f8c98a; }
+
+/* Tail: outline + white fill come from the SVG (bottom layer); patches
+   on top are CSS radial-gradients so they're tunable with the same
+   syntax as the body. The tail curve goes from ~(19%, 83%) at the base
+   to ~(73%, 17%) at the tip — keep patch centers near that path so they
+   land on the white tail (a circle off the path will float in empty
+   space, since the gradient covers the whole tail box). */
+.skin-calico .tail {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 150'><path d='M 25 125 Q 115 110 95 25' fill='none' stroke='%231a1a1a' stroke-width='48' stroke-linecap='round'/><path d='M 25 125 Q 115 110 95 25' fill='none' stroke='%23ffffff' stroke-width='32' stroke-linecap='round'/></svg>");
+}

@@ -1,0 +1,121 @@
+/* Mujaer — the common Indonesian tabby (kucing mujaer). Warm grey-tan
+   fur with dark tabby stripes: forehead "M" plus vertical mackerel side
+   stripes. Each stripe is a true pill (rectangle + semicircle caps, no
+   taper), drawn as one ::after pseudo-element stamped to many positions
+   via box-shadow. Uses cqw/cqh so stripes scale with each body shape. */
+
+.skin-mujaer {
+  --fur:        #a89a88;
+  --belly:      #f0e8dc;
+  --ear-inner:  #ffc2d1;
+  --cheek:      #ffb3c6;
+  --bean:       #ffc2d1;
+}
+
+/* Per-body-type stripe placement. Each body shape has a different aspect
+   ratio, so the same % coordinates land in different visual spots — each
+   rule is a copy you can tune independently. Stripes are radial-gradient
+   ellipses; because `.cat` has a border-radius (egg shape), the ellipse
+   backgrounds are clipped to that shape automatically. Tune width via
+   the first % (thinner = more pill-like) and length via the second. */
+
+.cat.skin-mujaer.body-xobese {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='38' cy='8' rx='2' ry='10' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='50' cy='8' rx='2' ry='12' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='62' cy='8' rx='2' ry='10' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+
+
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='15' cy='18' rx='2' ry='12' fill='%233e342c' transform='rotate(-30 15 18)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='8' cy='22' rx='2' ry='12' fill='%233e342c' transform='rotate(-30 8 22)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='85' cy='18' rx='2' ry='12' fill='%233e342c' transform='rotate(30 85 18)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='92' cy='22' rx='2' ry='12' fill='%233e342c' transform='rotate(30 92 22)'/></svg>") 0 0 / 100% 100% no-repeat,
+
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='15' cy='82' rx='2' ry='12' fill='%233e342c' transform='rotate(30 15 82)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='8' cy='78' rx='2' ry='12' fill='%233e342c' transform='rotate(30 8 78)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='85' cy='82' rx='2' ry='12' fill='%233e342c' transform='rotate(-30 85 82)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='92' cy='78' rx='2' ry='12' fill='%233e342c' transform='rotate(-30 92 78)'/></svg>") 0 0 / 100% 100% no-repeat,
+
+    var(--fur);
+}
+
+.cat.skin-mujaer.body-obese {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='38' cy='8' rx='2' ry='10' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='50' cy='8' rx='2' ry='12' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='62' cy='8' rx='2' ry='10' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+    
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='15' cy='18' rx='2' ry='12' fill='%233e342c' transform='rotate(-30 15 18)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='8' cy='22' rx='2' ry='12' fill='%233e342c' transform='rotate(-30 8 22)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='85' cy='18' rx='2' ry='12' fill='%233e342c' transform='rotate(30 85 18)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='92' cy='22' rx='2' ry='12' fill='%233e342c' transform='rotate(30 92 22)'/></svg>") 0 0 / 100% 100% no-repeat,
+
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='15' cy='82' rx='2' ry='12' fill='%233e342c' transform='rotate(30 15 82)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='8' cy='78' rx='2' ry='12' fill='%233e342c' transform='rotate(30 8 78)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='85' cy='82' rx='2' ry='12' fill='%233e342c' transform='rotate(-30 85 82)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='92' cy='78' rx='2' ry='12' fill='%233e342c' transform='rotate(-30 92 78)'/></svg>") 0 0 / 100% 100% no-repeat,
+
+    var(--fur);
+}
+
+.cat.skin-mujaer.body-overweight {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='38' cy='8' rx='2.2' ry='10' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='50' cy='8' rx='2.2' ry='12' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='62' cy='8' rx='2.2' ry='10' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+    
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='15' cy='18' rx='2.2' ry='12' fill='%233e342c' transform='rotate(-30 15 18)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='8' cy='22' rx='2.2' ry='12' fill='%233e342c' transform='rotate(-30 8 22)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='85' cy='18' rx='2.2' ry='12' fill='%233e342c' transform='rotate(30 85 18)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='92' cy='22' rx='2.2' ry='12' fill='%233e342c' transform='rotate(30 92 22)'/></svg>") 0 0 / 100% 100% no-repeat,
+
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='15' cy='82' rx='2.2' ry='12' fill='%233e342c' transform='rotate(30 15 82)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='8' cy='78' rx='2.2' ry='12' fill='%233e342c' transform='rotate(30 8 78)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='85' cy='82' rx='2.2' ry='12' fill='%233e342c' transform='rotate(-30 85 82)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='92' cy='78' rx='2.2' ry='12' fill='%233e342c' transform='rotate(-30 92 78)'/></svg>") 0 0 / 100% 100% no-repeat,
+
+    var(--fur);
+}
+
+.cat.skin-mujaer.body-normal {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='38' cy='8' rx='2.4' ry='10' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='50' cy='8' rx='2.4' ry='12' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='62' cy='8' rx='2.4' ry='10' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+    
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='15' cy='18' rx='2.4' ry='12' fill='%233e342c' transform='rotate(-30 15 18)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='8' cy='22' rx='2.4' ry='12' fill='%233e342c' transform='rotate(-30 8 22)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='85' cy='18' rx='2.4' ry='12' fill='%233e342c' transform='rotate(30 85 18)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='92' cy='22' rx='2.4' ry='12' fill='%233e342c' transform='rotate(30 92 22)'/></svg>") 0 0 / 100% 100% no-repeat,
+
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='15' cy='82' rx='2.4' ry='12' fill='%233e342c' transform='rotate(30 15 82)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='8' cy='78' rx='2.4' ry='12' fill='%233e342c' transform='rotate(30 8 78)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='85' cy='82' rx='2.4' ry='12' fill='%233e342c' transform='rotate(-30 85 82)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='92' cy='78' rx='2.4' ry='12' fill='%233e342c' transform='rotate(-30 92 78)'/></svg>") 0 0 / 100% 100% no-repeat,
+
+    var(--fur);
+}
+
+.cat.skin-mujaer.body-underweight {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='38' cy='8' rx='2.6' ry='10' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='50' cy='8' rx='2.6' ry='12' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='62' cy='8' rx='2.6' ry='10' fill='%233e342c' transform='rotate(0)'/></svg>") 0 0 / 100% 100% no-repeat,
+
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='15' cy='18' rx='2.6' ry='12' fill='%233e342c' transform='rotate(-30 15 18)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='8' cy='22' rx='2.6' ry='12' fill='%233e342c' transform='rotate(-30 8 22)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='85' cy='18' rx='2.6' ry='12' fill='%233e342c' transform='rotate(30 85 18)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='92' cy='22' rx='2.6' ry='12' fill='%233e342c' transform='rotate(30 92 22)'/></svg>") 0 0 / 100% 100% no-repeat,
+
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='15' cy='82' rx='2.6' ry='12' fill='%233e342c' transform='rotate(30 15 82)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='8' cy='78' rx='2.6' ry='12' fill='%233e342c' transform='rotate(30 8 78)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='85' cy='82' rx='2.6' ry='12' fill='%233e342c' transform='rotate(-30 85 82)'/></svg>") 0 0 / 100% 100% no-repeat,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><ellipse cx='92' cy='78' rx='2.6' ry='12' fill='%233e342c' transform='rotate(-30 92 78)'/></svg>") 0 0 / 100% 100% no-repeat,
+
+    var(--fur);
+}
+
+/* Tail: tan fill stroke over the outline. */
+.skin-mujaer .tail {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 150'><path d='M 25 125 Q 115 110 95 25' fill='none' stroke='%231a1a1a' stroke-width='48' stroke-linecap='round'/><path d='M 25 125 Q 115 110 95 25' fill='none' stroke='%23a89a88' stroke-width='32' stroke-linecap='round'/></svg>");
+}

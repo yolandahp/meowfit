@@ -1,0 +1,15 @@
+/* Orange tabby — warm orange fur with three darker stripes on the
+   forehead, white belly, pink ears/cheeks/beans. */
+
+.skin-orange {
+  --fur:        #f8c98a;
+  --belly:      #ffffff;
+  --ear-inner:  #ffc2d1;
+  --cheek:      #ffb3c6;
+  --bean:       #ffc2d1;
+}
+
+/* Tail: orange fill stroke over the black outline. */
+.skin-orange .tail {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 150'><path d='M 25 125 Q 115 110 95 25' fill='none' stroke='%231a1a1a' stroke-width='48' stroke-linecap='round'/><path d='M 25 125 Q 115 110 95 25' fill='none' stroke='%23f8c98a' stroke-width='32' stroke-linecap='round'/></svg>");
+}

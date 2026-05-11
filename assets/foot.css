@@ -1,10 +1,10 @@
 /* Little cat feet peeking out from the bottom of the body. Each foot is a
-   rounded oval in the same ginger/purple palette as the body, with a pink
-   toe bean on top. Variants scale with body size and spread. */
+   rounded oval with a paw on it: ::before draws the main pad, ::after
+   draws three toe beans arranged in an arc above the pad. */
 .foot {
   position: absolute;
-  background: #f8c98a;
-  border: 7px solid #5a1f4a;
+  background: var(--fur, transparent);
+  border: 7px solid var(--outline);
   border-radius: 50% 50% 50% 50% / 55% 55% 45% 45%;
   box-shadow: inset -3px -4px 0 rgba(0,0,0,0.05);
   z-index: 2;
@@ -14,12 +14,22 @@
   content: "";
   position: absolute;
   left: 50%;
-  top: 26%;
+  top: 42%;
   transform: translateX(-50%);
-  width: 48%;
-  height: 40%;
-  background: #ffc2d1;
+  width: 54%;
+  height: 44%;
+  background: var(--bean, transparent);
   border-radius: 50%;
+}
+
+.foot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 24% 30%, var(--bean, transparent) 10%, transparent 0%),
+    radial-gradient(circle at 50% 22%, var(--bean, transparent) 10%, transparent 0%),
+    radial-gradient(circle at 76% 30%, var(--bean, transparent) 10%, transparent 0%);
 }
 
 .foot-xobese {

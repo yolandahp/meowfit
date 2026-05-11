@@ -1,3 +1,7 @@
+:root {
+  --outline: #1a1a1a;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -24,4 +28,36 @@ body {
   font-weight: 700;
   color: #4a2a5e;
   letter-spacing: 0.5px;
+}
+
+.skin-picker {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #fff;
+  border: 3px solid #5a1f4a;
+  border-radius: 999px;
+  box-shadow: 0 4px 0 rgba(90, 31, 74, 0.15);
+  z-index: 10;
+}
+
+.skin-picker button {
+  font: inherit;
+  font-weight: 700;
+  color: #4a2a5e;
+  background: #fff;
+  border: 2px solid #5a1f4a;
+  border-radius: 999px;
+  padding: 6px 16px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+}
+
+.skin-picker button[aria-pressed="true"] {
+  background: #5a1f4a;
+  color: #fff;
 }

@@ -1,0 +1,30 @@
+/* Black cat — charcoal fur with a slightly lighter belly so it stays
+   visible against the body. Yellow eyes (the default eye fill is near-
+   black and would disappear on black fur). Pink ears/cheeks/beans. */
+
+.skin-black {
+  --fur:        #0c0912;
+  --belly:      #2e282a;
+  --ear-inner:  #f3896f;
+  --cheek:      #514745;
+  --bean:       #f3896f;
+}
+
+/* Yellow iris ring with a black pupil. Inner 40% of radius stays black
+   so the white ::before/::after highlights from eye.css still land on
+   the pupil and read as sparkles. */
+.skin-black .eye {
+  background: radial-gradient(circle, #0c0912 50%, #f9d342 65%);
+}
+
+/* Grey whiskers — same SVG as whiskers.css with stroke swapped to a
+   dark grey so they read softly against the black fur. */
+.skin-black .whiskers {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><path d='M38 16 Q28 12 18 15' stroke='%23514745' stroke-width='2.8' fill='none' stroke-linecap='round'/><path d='M38 22 Q22 18 4 22' stroke='%23514745' stroke-width='2.8' fill='none' stroke-linecap='round'/><path d='M38 28 Q26 28 14 30' stroke='%23514745' stroke-width='2.8' fill='none' stroke-linecap='round'/></svg>") center/contain no-repeat;
+}
+
+/* Tail: fur fill stroke over the outline. Fill matches --fur so body and
+   tail stay visually continuous. */
+.skin-black .tail {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 150'><path d='M 25 125 Q 115 110 95 25' fill='none' stroke='%231a1a1a' stroke-width='48' stroke-linecap='round'/><path d='M 25 125 Q 115 110 95 25' fill='none' stroke='%230c0912' stroke-width='32' stroke-linecap='round'/></svg>");
+}

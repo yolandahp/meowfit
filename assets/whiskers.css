@@ -6,7 +6,7 @@
   aspect-ratio: 1 / 1;
   top: 32%;
   z-index: 2;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><path d='M38 16 Q28 12 18 15' stroke='%235a1f4a' stroke-width='2.8' fill='none' stroke-linecap='round'/><path d='M38 22 Q22 18 4 22' stroke='%235a1f4a' stroke-width='2.8' fill='none' stroke-linecap='round'/><path d='M38 28 Q26 28 14 30' stroke='%235a1f4a' stroke-width='2.8' fill='none' stroke-linecap='round'/></svg>") center/contain no-repeat;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><path d='M38 16 Q28 12 18 15' stroke='%231a1a1a' stroke-width='2.8' fill='none' stroke-linecap='round'/><path d='M38 22 Q22 18 4 22' stroke='%231a1a1a' stroke-width='2.8' fill='none' stroke-linecap='round'/><path d='M38 28 Q26 28 14 30' stroke='%231a1a1a' stroke-width='2.8' fill='none' stroke-linecap='round'/></svg>") center/contain no-repeat;
 }
 .whiskers.left  { left: -18%; }
 .whiskers.right { right: -18%; transform: scaleX(-1); }

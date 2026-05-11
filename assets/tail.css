@@ -6,7 +6,7 @@
   position: absolute;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 150'><path d='M 25 125 Q 115 110 95 25' fill='none' stroke='%235a1f4a' stroke-width='48' stroke-linecap='round'/><path d='M 25 125 Q 115 110 95 25' fill='none' stroke='%23f8c98a' stroke-width='32' stroke-linecap='round'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 150'><path d='M 25 125 Q 115 110 95 25' fill='none' stroke='%231a1a1a' stroke-width='48' stroke-linecap='round'/></svg>");
   z-index: -1;
   transform: rotate(10deg);
   transform-origin: 19% 83%;
@@ -48,6 +48,6 @@
   width: 70%;
   aspect-ratio: 130 / 150;
   right: -25%;
-  bottom: 8%;
+  bottom: 6%;
   transform: rotate(10deg);
 }
